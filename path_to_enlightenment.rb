@@ -2,11 +2,11 @@
 
 $LOAD_PATH << File.dirname(__FILE__)
 
-require 'about_asserts'
-require 'about_nil'
-require 'about_objects'
-require 'about_arrays'
-require 'about_array_assignment'
+require 'about_asserts' #COMPLETED
+require 'about_nil' #COMPLETED
+require 'about_objects' #COMPLETED
+require 'about_arrays' #COMPLETED
+require 'about_array_assignment' #COMPLETED
 require 'about_hashes'
 require 'about_strings'
 require 'about_symbols'
