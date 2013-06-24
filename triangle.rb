@@ -13,8 +13,24 @@
 # and
 #   about_triangle_project_2.rb
 #
+# def triangle(a, b, c)
+#   # WRITE THIS CODE
+#   if a <= 0 || b <= 0 || c <= 0
+#     raise TriangleError "not a valid triangle"
+#   end
+
+#   if a == b && a == c
+#     :equilateral
+#   elsif (a == b && b != c) || (a == c && b != c) || (b == c && a != c)
+#     :isosceles
+#   elsif (a != b && b != c)
+#     :scalene
+#   end
+# end
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  a, b, c = [a, b, c].sort
+  raise TriangleError if a <= 0 || a + b <= c
+  [nil, :equilateral, :isosceles, :scalene][[a, b, c].uniq.size]
 end
 
 # Error class used in part 2.  No need to change this code.
